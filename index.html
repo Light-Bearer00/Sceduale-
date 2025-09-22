@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    /* --- Sleek Weekly Schedule Table --- */
+    .weekly-schedule {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-family: "Inter", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      background: rgba(30, 32, 48, 0.75); /* translucent “glass” */
+      backdrop-filter: blur(12px);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    /* header row */
+    .weekly-schedule thead th {
+      background: rgba(60, 64, 92, 0.8);
+      color: #e9eefc;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 14px 16px;
+      font-weight: 600;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* day column (merged cells) */
+    .weekly-schedule th[rowspan] {
+      background: rgba(80, 86, 120, 0.6);
+      color: #ffd86b;
+      font-weight: 700;
+      text-align: center;
+      vertical-align: middle;
+      padding: 16px 12px;
+      font-size: 1.05rem;
+      border-right: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    /* normal cells */
+    .weekly-schedule td {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      color: #d9deea;
+    }
+
+    /* highlight the time column slightly */
+    .weekly-schedule td:nth-child(3) {
+      color: #9be2ff;
+      font-weight: 500;
+    }
+
+    /* zebra stripes */
+    .weekly-schedule tbody tr:nth-child(even) td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* row hover */
+    .weekly-schedule tbody tr:hover td {
+      background: rgba(130, 160, 255, 0.1);
+      transition: background 0.25s ease;
+    }
+
+    /* responsive font size */
+    @media (max-width: 700px) {
+      .weekly-schedule {
+        font-size: 0.85rem;
+      }
+      .weekly-schedule thead th {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+  <body>
+    <table class="weekly-schedule" border="1" cellpadding="6" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Activity</th>
+          <th>Time</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Monday -->
+        <tr>
+          <th rowspan="5">Monday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Tuesday -->
+        <tr>
+          <th rowspan="5">Tuesday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Wednesday -->
+        <tr>
+          <th rowspan="5">Wednesday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Thursday -->
+        <tr>
+          <th rowspan="5">Thursday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Friday -->
+        <tr>
+          <th rowspan="5">Friday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Saturday -->
+        <tr>
+          <th rowspan="5">Saturday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+
+        <!-- Sunday -->
+        <tr>
+          <th rowspan="5">Sunday</th>
+          <td>Project</td>
+          <td>08:00 – 11:35</td>
+        </tr>
+        <tr>
+          <td>Data Engineering</td>
+          <td>13:00 – 19:00</td>
+        </tr>
+        <tr>
+          <td>Learning German</td>
+          <td>20:00 – 22:00</td>
+        </tr>
+        <tr>
+          <td>Game Design</td>
+          <td>23:00 – 01:00</td>
+        </tr>
+        <tr>
+          <td>Soft Skills</td>
+          <td>01:30 – 02:30</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
